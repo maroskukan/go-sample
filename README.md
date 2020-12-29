@@ -70,6 +70,7 @@ docker push maroskukan/go-sample
 Step 4: Verify the remote image (may take a couple of minutes to get indexed)
 ```
 docker search maroskukan/go-sample
+```
 
 ## Cleanup
 
