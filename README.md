@@ -49,3 +49,15 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 11
 ```
+
+## Cleanup
+
+Step 1: Stop and remove the container
+```
+docker rm -f go-web
+```
+
+Step 2: Optionally, remove the created image
+```
+docker rmi go-sample
+```
