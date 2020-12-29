@@ -1,11 +1,18 @@
 # go-sample
 Sample Dockerized Go Application 
 
+- [Dependencies](#dependencies)
+- [Building the application](#building-the-application)
+- [Running the application](#running-the-application)
+- [Verifying the application](#verifying-the-application)
+- [Pushing image to registry](#pushing-image-to-registry)
+- [Cleanup](#cleanup)
+
 ## Dependencies
 
 Git, Docker
 
-## Running the application
+## Building the application
 
 Step 1: Download the repository and build image
 ```
@@ -21,9 +28,16 @@ REPOSITORY                    TAG        IMAGE ID       CREATED          SIZE
 go-sample                     latest     6d7e28a54cfd   21 seconds ago   845MB
 ```
 
-Step 3: Run the container
+## Running the application
+
+Step 1: Run the container
 ```
 docker run -d -p 5000:5000 --name go-web go-sample
+```
+
+Step 2: Verify the container
+```
+docker ps -f name=go-web
 ```
 
 ## Verifying the application
@@ -50,7 +64,7 @@ ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 11
 ```
 
-## Pushing to registry
+## Pushing image to registry
 
 Step 1: Login to Docker Hub
 ```
