@@ -1,5 +1,7 @@
 FROM golang:1.15
+
+RUN mkdir -p /project
 WORKDIR /project
-COPY . /project
-RUN go build main.go
-CMD ["websrvc"]
+ADD . /project
+RUN go build ./main.go
+CMD ["./websrvc"]
